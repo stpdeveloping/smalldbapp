@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kotrak", "Kotrak\Kotrak.csproj", "{701192FA-0AA6-4578-B251-84A98F3A1159}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories", "Repositories\Repositories.csproj", "{0D9E025C-CBE5-4FA4-8B75-58E145F5DFE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{701192FA-0AA6-4578-B251-84A98F3A1159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{701192FA-0AA6-4578-B251-84A98F3A1159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{701192FA-0AA6-4578-B251-84A98F3A1159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{701192FA-0AA6-4578-B251-84A98F3A1159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D9E025C-CBE5-4FA4-8B75-58E145F5DFE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D9E025C-CBE5-4FA4-8B75-58E145F5DFE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D9E025C-CBE5-4FA4-8B75-58E145F5DFE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D9E025C-CBE5-4FA4-8B75-58E145F5DFE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DCB58816-A1CA-43F8-A956-741F6BB84151}
+	EndGlobalSection
+EndGlobal

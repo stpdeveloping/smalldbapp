@@ -1,0 +1,13 @@
+﻿@model Kotrak.Models.Dto
+<div class="columns">
+    <div class="column is-one-third"></div>
+    <div class="column">
+        @await Html.PartialAsync("_buyerData", new Dto(),
+           new ViewDataDictionary(ViewData) { 
+               { "ActionMethod", "AddNewBuyer" },
+               { "ButtonLabel", "Add" } 
+           })
+    </div>
+    <div class="column is-one-third"></div>
+</div>
+

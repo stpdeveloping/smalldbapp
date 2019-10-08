@@ -1,0 +1,45 @@
+﻿@model Kotrak.Models.Dto
+@{ 
+    string buyerCredentials = string.Empty;
+}
+    <div class="columns">
+        <div class="column is-one-third"></div>
+        <div class="column">
+            <div class="field">
+                <div class="control">
+                    <div class="dropdown">
+                        <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu2">
+                                <span>@(string.IsNullOrEmpty(Model.buyerInDropdown) ? "Please select buyer" : Model.buyerInDropdown)</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu2" role="menu">
+                            @if (Model.Buyers.Any() && Model.Buyers != null)
+                            {
+                                <div class="dropdown-content">
+                                    @foreach (var dropdownItem in Model.Buyers)
+                                    {
+                                        buyerCredentials = $"<div class='dropdown-item'><a href='{Url.ActionLink("GetBuyer", "Home", new { id = dropdownItem.Id })}'>{dropdownItem.Name} {dropdownItem.Surname}</a></div>";
+                                        @Html.Raw(Model.Buyers.IndexOf(dropdownItem) == Model.Buyers.Count - 1 ? buyerCredentials : $"{buyerCredentials}<hr class='dropdown-divider'>")
+                                    }
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @await Html.PartialAsync("_buyerData", Model,
+               new ViewDataDictionary(ViewData) {
+                   { "ActionMethod", "ChangeBuyer" },
+                   { "ButtonLabel", "Submit" }
+               })
+        </div>
+            <div class="column is-one-third"></div>
+        </div>
+<script type="text/javascript">
+    const dropdown = document.querySelector(".dropdown");
+    dropdown.addEventListener("click", () => dropdown.classList.toggle("is-active"));
+</script>

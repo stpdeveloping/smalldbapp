@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buyers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" asp-controller="Home" asp-action="Index">
+                    Buyers
+                </a>
+
+                <a class="navbar-item" asp-controller="Home" asp-action="NewBuyer">
+                    New buyer
+                </a>
+            </div>
+        </div>
+            </div>
+    </nav>
+    <div class="container">
+        <section class="section">
+        @RenderBody()
+        </section>
+        </div>
+</body>
+</html>

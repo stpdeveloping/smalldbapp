@@ -1,0 +1,31 @@
+﻿@model Kotrak.Models.Dto
+    <form asp-controller="Home" asp-action="@ViewData["ActionMethod"]" method="post">
+        @Html.HiddenFor(model => model.Id)
+        <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+                <input name="Name" value="@Model.Name" class="input" type="text">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Surname</label>
+            <div class="control">
+                <input name="Surname" value="@Model.Surname" class="input" type="text">
+            </div>
+        </div>
+        <div class="field">
+            <label class="label">Country</label>
+            <div class="control">
+                <input name="Country" value="@Model.Country" class="input" type="text">
+            </div>
+        </div>
+        <nav class="level">
+            <div class="level-left"></div>
+            <div class="level-right">
+                <div class="level-item">
+                    <button class="button is-primary">@ViewData["ButtonLabel"]</button>
+                </div>
+            </div>
+        </nav>
+    </form>
+
